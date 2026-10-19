@@ -34,7 +34,7 @@ export default async function Home() {
             <p className="mb-8 max-w-[640px] text-base leading-[26px] text-ink-muted">
               Four stages, built on a scan of a real vehicle and public driving datasets.
             </p>
-            <StageTrack stages={featured.stages} current={featured.currentStage ?? 0} project={featured.name} />
+            <StageTrack stages={featured.stages} current={featured.currentStage ?? 0} />
             <div className="mt-6 flex flex-wrap items-baseline gap-x-6 gap-y-2">
               {featured.href && (
                 <a

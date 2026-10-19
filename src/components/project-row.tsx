@@ -1,5 +1,4 @@
 import type { Project } from "@/lib/types";
-import { DetectionFrame } from "@/components/detection-frame";
 import { StackChips, StatusBox } from "@/components/boxes";
 
 export function ProjectRow({ project }: { project: Project }) {
@@ -19,15 +18,13 @@ export function ProjectRow({ project }: { project: Project }) {
 
   return (
     <li className="-mx-2 border-b border-line md:-mx-4">
-      <DetectionFrame label={`${project.name}: ${project.status.label}`} locked={project.featured}>
-        {project.href ? (
-          <a href={project.href} className="group block rounded-lg text-ink no-underline" target="_blank" rel="noreferrer">
-            {body}
-          </a>
-        ) : (
-          <div className="group">{body}</div>
-        )}
-      </DetectionFrame>
+      {project.href ? (
+        <a href={project.href} className="group block rounded-lg text-ink no-underline" target="_blank" rel="noreferrer">
+          {body}
+        </a>
+      ) : (
+        <div className="group">{body}</div>
+      )}
     </li>
   );
 }

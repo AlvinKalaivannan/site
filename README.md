@@ -18,7 +18,7 @@ npm run build      # production build
 | All copy: name, hero line, contact, links | `src/content/projects.ts` (`site`) |
 | Projects: descriptions, stacks, awards, default statuses | `src/content/projects.ts` (`projects`) |
 | Design tokens (both themes, status colors) | `src/app/globals.css` |
-| Detection frame, readout, status box, stack chip, stage track | `src/components/` |
+| Status box, stack chip, stage track | `src/components/` |
 | Live project data from GitHub | `src/lib/github.ts` |
 | GitHub webhook endpoint | `src/app/api/revalidate/route.ts` |
 | Fonts (self-hosted, SIL OFL) | `src/app/fonts/` |

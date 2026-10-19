@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { site } from "@/content/projects";
-import { DetectionFrame } from "@/components/detection-frame";
 
 const container = "mx-auto max-w-[1080px] px-4 md:px-12";
 
@@ -29,9 +28,7 @@ const button =
 export function Hero() {
   return (
     <section aria-label="Intro" className="pt-24 pb-12">
-      <DetectionFrame label={site.readout} draw locked className="inline-block">
-        <h1 className="m-0 text-[clamp(44px,8vw,72px)] leading-[0.95] font-semibold tracking-[-0.035em]">{site.name}</h1>
-      </DetectionFrame>
+      <h1 className="m-0 text-[clamp(44px,8vw,72px)] leading-[0.95] font-semibold tracking-[-0.035em]">{site.name}</h1>
       <p className="mt-6 max-w-[640px] text-lg leading-[30px] text-ink-muted">{site.line}</p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <a href={`mailto:${site.email}`} className={`${button} bg-ink text-paper hover:bg-signal hover:text-on-signal`}>

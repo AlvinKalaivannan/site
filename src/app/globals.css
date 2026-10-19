@@ -75,7 +75,6 @@
   --color-status-done-fg: var(--status-done-fg);
 
   --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
 }
 
 body {
@@ -91,30 +90,4 @@ body {
 :focus-visible {
   outline: 2px solid var(--signal-ink);
   outline-offset: 2px;
-}
-
-/* DetectionFrame: corners hidden until hover/focus, or always when locked. */
-.ak-mark {
-  opacity: 0;
-  transform: scale(1.025);
-  transition: opacity 160ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 160ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.ak-frame:hover .ak-mark,
-.ak-frame:has(:focus-visible) .ak-mark,
-.ak-frame[data-locked="true"] .ak-mark {
-  opacity: 1;
-  transform: none;
-}
-.ak-frame[data-draw="true"] .ak-mark {
-  animation: ak-draw 160ms cubic-bezier(0.2, 0.7, 0.2, 1) 500ms both;
-}
-
-@keyframes ak-draw {
-  from { opacity: 0; transform: scale(1.025); }
-  to { opacity: 1; transform: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ak-mark { transition: none; }
-  .ak-frame[data-draw="true"] .ak-mark { animation: none; }
 }

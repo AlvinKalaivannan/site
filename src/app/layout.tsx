@@ -12,11 +12,6 @@ const schibsted = localFont({
   ],
 });
 
-const plexMono = localFont({
-  variable: "--font-plex-mono",
-  src: [{ path: "./fonts/ibm-plex-mono-latin-500-normal.woff2", weight: "500", style: "normal" }],
-});
-
 export const metadata: Metadata = {
   title: "Alvin Kalaivannan",
   description:
@@ -25,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${schibsted.variable} ${plexMono.variable} antialiased`}>
+    <html lang="en" className={`${schibsted.variable} antialiased`}>
       <body className="min-h-screen bg-paper font-sans text-ink">{children}</body>
     </html>
   );
