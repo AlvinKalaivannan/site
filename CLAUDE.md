@@ -101,7 +101,13 @@ movements and nothing more:
   and a 3px raspberry bar that grows down the left edge.
 - Press feedback: buttons dip to 98% and linked rows to 99% while pressed.
 - The Resume button's border turns raspberry on hover.
-Transforms use `motion-safe:` so `prefers-reduced-motion` turns them off (colors still change).
+- Rise (`ak-rise` in `globals.css`): content fades in from 12px below. The hero
+  (`.ak-intro`) does it once on load, staggered 60ms. Headings, rows, stage cards and the
+  contact block (`.ak-reveal`) do it as they scroll into view (CSS scroll timeline, no JS;
+  unsupported browsers just show the content). Keep it subtle: no bigger offsets, no
+  bounce, no sideways motion.
+Transforms use `motion-safe:` (or sit inside a `prefers-reduced-motion: no-preference`
+block), so reduced motion turns them off (colors still change).
 
 **Removed on purpose (do not reintroduce):**
 - The "detection frame" (raspberry corner brackets plus a mono readout label around the

@@ -22,7 +22,7 @@ export function ProjectRow({ project }: { project: Project }) {
   );
 
   return (
-    <li className="-mx-2 border-b border-line last:border-b-0 md:-mx-4">
+    <li className="ak-reveal -mx-2 border-b border-line last:border-b-0 md:-mx-4">
       {project.href ? (
         <a
           href={project.href}

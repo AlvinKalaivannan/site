@@ -27,7 +27,7 @@ const button =
 
 export function Hero() {
   return (
-    <section aria-label="Intro" className="pt-24">
+    <section aria-label="Intro" className="ak-intro pt-24">
       <h1 className="m-0 text-[clamp(44px,8vw,72px)] leading-[0.95] font-semibold tracking-[-0.035em]">{site.name}</h1>
       <p className="mt-6 max-w-[640px] text-lg leading-[30px] text-ink-muted">{site.line}</p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -60,9 +60,9 @@ export const sectionDivide = "mt-12 border-t border-line pt-12";
 export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-h" className={`${sectionDivide} pb-24`}>
-      <h2 id="contact-h" className="mb-4 text-[28px] leading-[34px] font-semibold tracking-[-0.02em]">Get in touch</h2>
-      <p className="mb-6 max-w-[640px] text-base leading-[26px] text-ink-muted">{site.contactLine}</p>
-      <div className="flex flex-wrap gap-6 text-base leading-[26px]">
+      <h2 id="contact-h" className="ak-reveal mb-4 text-[28px] leading-[34px] font-semibold tracking-[-0.02em]">Get in touch</h2>
+      <p className="ak-reveal mb-6 max-w-[640px] text-base leading-[26px] text-ink-muted">{site.contactLine}</p>
+      <div className="ak-reveal flex flex-wrap gap-6 text-base leading-[26px]">
         <a href={`mailto:${site.email}`} className={link}>{site.email}</a>
         <a href={site.github} className={link} target="_blank" rel="noreferrer">
           <FaGithub aria-hidden="true" className="size-4" />

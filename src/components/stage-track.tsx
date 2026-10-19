@@ -7,7 +7,7 @@ export function StageTrack({ stages, current }: { stages: Stage[]; current: numb
   return (
     <ol className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
       {stages.map((stage, i) => (
-        <li key={stage.name} aria-current={i === current ? "step" : undefined} className="flex flex-col gap-1.5 pt-4 pb-1">
+        <li key={stage.name} aria-current={i === current ? "step" : undefined} className="ak-reveal flex flex-col gap-1.5 pt-4 pb-1">
           <span aria-hidden="true" className={cn("mb-2.5 h-0.5", i <= current ? "bg-signal" : "bg-line")} />
           <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
             <span className="text-sm leading-[22px] text-ink-muted">{i + 1}</span>

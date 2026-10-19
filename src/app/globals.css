@@ -91,3 +91,33 @@ body {
   outline: 2px solid var(--signal-ink);
   outline-offset: 2px;
 }
+
+/* Rise: content eases up 12px and fades in. Hero on load; everything else as it scrolls
+   into view. No JS, so browsers without scroll timelines (or with reduced motion) just
+   show the content. */
+@keyframes ak-rise {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ak-intro > * {
+    animation: ak-rise 480ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .ak-intro > :nth-child(2) {
+    animation-delay: 60ms;
+  }
+  .ak-intro > :nth-child(3) {
+    animation-delay: 120ms;
+  }
+
+  @supports (animation-timeline: view()) {
+    .ak-reveal {
+      animation: ak-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
