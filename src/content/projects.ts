@@ -65,7 +65,7 @@ export const projects: Project[] = [
 
 export const site = {
   name: "Alvin Kalaivannan",
-  line: "Computer Engineering at UofT. I build CV and ML systems that flag risk before it turns into damage.",
+  line: "Computer Engineering at UofT. Building CV and ML systems that flag risk before it turns into damage.",
   availability: "Open to summer 2027 internships",
   contactLine: "I'm looking for CV and ML internships for summer 2027. Email is the fastest way to reach me.",
   email: "alvinkalaivannan@gmail.com",

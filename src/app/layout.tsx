@@ -15,7 +15,7 @@ const schibsted = localFont({
 export const metadata: Metadata = {
   title: "Alvin Kalaivannan",
   description:
-    "Computer Engineering at UofT. I build CV and ML systems that flag risk before it turns into damage.",
+    "Computer Engineering at UofT. Building CV and ML systems that flag risk before it turns into damage.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

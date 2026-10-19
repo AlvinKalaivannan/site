@@ -12,7 +12,7 @@ Context for any Claude session working on this repo. Read this first, then `AGEN
   is recruiters and founders he cold emails for **summer 2027 internships**. He's casting a
   wide net (CV, ML, software, dev tools), so the site keeps CV/ML as the sharp focus and lets
   the project list show range. Tailoring happens in each email, not on the site.
-- **Positioning:** "I build CV and ML systems that flag risk before it turns into damage."
+- **Positioning:** "Building CV and ML systems that flag risk before it turns into damage."
   His recent projects share that thread: Overstride (injury risk), VSCS (collision risk),
   Apiary AI (catching misbehaving AI agents).
 
@@ -125,7 +125,7 @@ Sections separated by 96px. Must work at 360px wide with no horizontal scroll.
 Order: nav, hero, What I'm building, Where VSCS is now, Get in touch, footer.
 
 - **Nav:** AK · Work · Contact · Resume ↗
-- **Hero:** "Alvin Kalaivannan". Line: "Computer Engineering at UofT. I build CV and ML
+- **Hero:** "Alvin Kalaivannan". Line: "Computer Engineering at UofT. Building CV and ML
   systems that flag risk before it turns into damage." Buttons: Email me, Resume ↗.
   Availability: "Open to summer 2027 internships".
 - **Projects** (newest first; status box next to the name):
