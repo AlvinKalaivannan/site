@@ -1,7 +1,7 @@
 import { getProjects } from "@/lib/github";
 import { ProjectRow } from "@/components/project-row";
 import { StageTrack } from "@/components/stage-track";
-import { Contact, Footer, Hero, SiteNav, container } from "@/components/site-chrome";
+import { Contact, Footer, Hero, SiteNav, container, sectionDivide } from "@/components/site-chrome";
 
 const dateFormat = new Intl.DateTimeFormat("en-CA", { month: "short", day: "numeric", year: "numeric", timeZone: "America/Toronto" });
 
@@ -15,7 +15,7 @@ export default async function Home() {
       <main id="top" className={container}>
         <Hero />
 
-        <section id="work" aria-labelledby="work-h" className="pt-24">
+        <section id="work" aria-labelledby="work-h" className={sectionDivide}>
           <h2 id="work-h" className="mb-8 text-[28px] leading-[34px] font-semibold tracking-[-0.02em]">
             What I&apos;m building
           </h2>
@@ -27,7 +27,7 @@ export default async function Home() {
         </section>
 
         {featured?.stages && (
-          <section id="current" aria-labelledby="current-h" className="pt-24">
+          <section id="current" aria-labelledby="current-h" className={sectionDivide}>
             <h2 id="current-h" className="mb-4 text-[28px] leading-[34px] font-semibold tracking-[-0.02em]">
               Where {featured.name} is now
             </h2>
@@ -41,7 +41,7 @@ export default async function Home() {
                   href={featured.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-base leading-[26px] text-ink underline decoration-line-strong underline-offset-4 hover:text-signal-ink hover:decoration-current"
+                  className="text-base leading-[26px] text-ink underline decoration-line-strong underline-offset-4 transition-colors duration-[160ms] hover:text-signal-ink hover:decoration-current"
                 >
                   Follow the build on GitHub ↗
                 </a>

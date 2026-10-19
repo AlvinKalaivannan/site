@@ -92,10 +92,16 @@ All pairs pass WCAG AA in both themes. Keep it that way when adding colors.
 semibold. Body 16/26, hero line 18/30. Paragraphs max 640px wide. Left-aligned everything.
 
 **Layout:** single column, max 1080px, 16px side padding on phones, 48px from 768px.
-Sections separated by 96px. Must work at 360px wide with no horizontal scroll.
+Sections separated by 96px with a `line` hairline halfway (`sectionDivide` in
+`site-chrome.tsx`). Must work at 360px wide with no horizontal scroll.
 
-**Motion:** minimal. Hover color/background transitions only (about 120 to 160ms). Respect
-`prefers-reduced-motion`.
+**Motion:** minimal, 120 to 160ms. Color/background transitions on hover, plus three
+movements and nothing more:
+- Project rows on hover or keyboard focus: `paper-raised` fill, a 1px raspberry outline,
+  and a 3px raspberry bar that grows down the left edge.
+- Press feedback: buttons dip to 98% and linked rows to 99% while pressed.
+- The Resume button's border turns raspberry on hover.
+Transforms use `motion-safe:` so `prefers-reduced-motion` turns them off (colors still change).
 
 **Removed on purpose (do not reintroduce):**
 - The "detection frame" (raspberry corner brackets plus a mono readout label around the
