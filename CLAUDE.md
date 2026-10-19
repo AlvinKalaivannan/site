@@ -107,10 +107,6 @@ Sections separated by 96px. Must work at 360px wide with no horizontal scroll.
 - "Class of 3T0".
 - A featured "demo" video box for VSCS (there's no demo yet; the stage track replaced it).
 
-If the frame removal hasn't landed yet when you read this, it's the next task: delete
-`detection-frame.tsx` and `readout.tsx`, their CSS (`.ak-frame`, `.ak-mark`, `ak-draw`),
-`site.readout`, and the Plex Mono font; keep row hover and keyboard focus visible.
-
 ## Copy rules
 
 - Proper capitalization everywhere: name in title case ("Alvin Kalaivannan"), headings and
@@ -182,14 +178,23 @@ fusion is in review; perception is built but blocked on measuring the camera mou
 sweep is a draft. Planned tools (Grounding DINO, SAM 2, COLMAP, nuScenes) aren't listed on
 the site until they run on real data.
 
+## Deployment
+
+- Vercel project `site-vl7g` (team AK), Git-connected: every push to `main` deploys.
+- Live at https://alvinkalaivannan.vercel.app (also https://site-vl7g.vercel.app).
+- `REVALIDATE_SECRET` is set for Production. The VSCS push webhook points at
+  `https://alvinkalaivannan.vercel.app/api/revalidate` and delivers successfully.
+- VSCS has `site.json` and the CLAUDE.md "Website status" section on `main`.
+
 ## Open items
 
-- Remove the detection frame (see above) if not done yet.
-- `public/resume.pdf`: Alvin adds his resume; all Resume links point there.
-- Vercel: set `REVALIDATE_SECRET` (and optionally `GITHUB_TOKEN`), connect the domain
-  alvinkalaivannan.com.
-- VSCS repo: add `site.json`, the CLAUDE.md "Website status" section, and the push webhook
-  to `https://alvinkalaivannan.com/api/revalidate`.
+- Custom domain: alvinkalaivannan.com isn't bought yet (about $11.25 USD/yr through
+  Vercel). It's already attached to `site-vl7g`; after buying, point its nameservers at
+  `ns1.vercel-dns.com` / `ns2.vercel-dns.com` (automatic if bought through Vercel) and
+  change the VSCS webhook URL to `https://alvinkalaivannan.com/api/revalidate`.
+- Resume: `public/resume.pdf` is live (phone number left out on purpose). Its VSCS bullet
+  still says "personal van and truck"; the subject vehicle is now a 2025 RAV4.
+- Optional: `GITHUB_TOKEN` in Vercel to raise the GitHub API rate limit.
 - Possibly later: a new signature element to replace the frame, if the page feels too plain.
 
 ## Checks before every commit
