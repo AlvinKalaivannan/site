@@ -1,5 +1,7 @@
 # CLAUDE.md: alvinkalaivannan.com
 
+Learning mode: LIGHT
+
 Context for any Claude session working on this repo. Read this first, then `AGENTS.md`
 (Next.js 16 rules: this version differs from older training data; check
 `node_modules/next/dist/docs/` before using framework APIs).

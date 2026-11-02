@@ -51,6 +51,7 @@ export const projects: Project[] = [
     award: "Best Use of ElevenLabs, JAMHacks 10",
     stack: ["Next.js", "TypeScript", "Gemini 2.5 Flash", "ElevenLabs"],
     status: { label: "Complete", state: "done" },
+    href: "https://github.com/hppddub/jamhacks2026",
   },
   {
     slug: "konnect",
