@@ -15,8 +15,7 @@ Context for any Claude session working on this repo. Read this first, then `AGEN
   wide net (CV, ML, software, dev tools), so the site keeps CV/ML as the sharp focus and lets
   the project list show range. Tailoring happens in each email, not on the site.
 - **Positioning:** "Building CV and ML systems that flag risk before it turns into damage."
-  His recent projects share that thread: Overstride (injury risk), VSCS (collision risk),
-  Apiary AI (catching misbehaving AI agents).
+  His recent projects share that thread: Overstride (injury risk) and VSCS (collision risk).
 
 ## How Alvin likes to work
 
@@ -145,15 +144,17 @@ Order: nav, hero, What I'm building, Where VSCS is now, Get in touch, footer.
 - **Projects** (newest first; status box next to the name):
   - VSCS (Vehicle Scanning Collision System), Building, 2026: "Segments a scanned vehicle
     into its parts and scores collision risk for each one." Python, PyTorch, OpenCV.
-  - Apiary AI, Building, 2026: "Governance and containment for developers running multiple
-    AI coding agents at once." Next.js, TypeScript, Tailwind CSS, OpenTelemetry.
-    (Co-built with a teammate.)
-  - Overstride, Complete, 2026: "Identifies the injured limb from running video: AUC 0.610
-    on motion capture, 0.583 on real video." Python, PyTorch, AthleticsPose,
-    AthletePose3D, Google Colab.
+  - Overstride, Building demo (active), 2026: "Measures running joint angles from video
+    within 3.4° of motion capture." Python, PyTorch, AthleticsPose, MoVi, Google Colab.
+    Ongoing: an offline per-runner demo with a per-joint error budget. Injury-risk
+    screening was ruled out (failed all 60 pre-registered tests), so no injury-detection
+    or AUC claims on the site.
   - BananaMOV, Complete, 2026: "Generates royalty-free music for any video using a VLM
     pipeline." Award: Best Use of ElevenLabs, JAMHacks 10. Next.js, TypeScript,
     Gemini 2.5 Flash, ElevenLabs.
+  - Grabby, Complete, 2025: "Counts push-ups by webcam and spends them on a robotic
+    pointer." Award: 4th of 60+ teams, Scrapyard Hacks Toronto. Python, OpenCV, MediaPipe,
+    Arduino, C++. No public repo, so no link.
   - Konnect, Complete, 2025: "Android app that notifies nearby users so they can meet up."
     Award: Best Pitch, United Hacks V5. Kotlin, Java, Android, Supabase.
 - **Where VSCS is now:** "Four stages, built on a scan of a real vehicle and public driving
@@ -162,7 +163,8 @@ Order: nav, hero, What I'm building, Where VSCS is now, Get in touch, footer.
   capture), 4 Score (In progress). Link: Follow the build on GitHub ↗, plus "Last updated
   <date>" from the latest commit.
 - **Get in touch:** "I'm looking for CV and ML internships for summer 2027. Email is the
-  fastest way to reach me." Links: alvinkalaivannan@gmail.com, GitHub ↗
+  fastest way to reach me." Links: alvin.kalaivannan@mail.utoronto.ca (matches the
+  resume; also the hero's Email me button), GitHub ↗
   (github.com/AlvinKalaivannan), LinkedIn ↗ (linkedin.com/in/alvinkalaivannan), with
   GitHub and LinkedIn icons from react-icons (Font Awesome brands).
 - **Footer:** "Alvin Kalaivannan, 2026" and "Built with Next.js and a design system of my own."
@@ -209,6 +211,8 @@ the site until they run on real data.
 - Resume: `public/resume.pdf` updated 2026-11-18 (ADR bullets, UofT email, site link, phone
   number left out on purpose). Its header links alvinkalaivannan.vercel.app; switch to .com
   once the domain is bought.
+- Apiary AI was removed from the site on 2026-11-18: discontinued (goals moved to CV) and
+  off the resume. Don't re-add it or show a "Discontinued" status.
 - Optional: `GITHUB_TOKEN` in Vercel to raise the GitHub API rate limit.
 - Possibly later: a new signature element to replace the frame, if the page feels too plain.
 
