@@ -206,8 +206,9 @@ the site until they run on real data.
   Vercel). It's already attached to `site-vl7g`; after buying, point its nameservers at
   `ns1.vercel-dns.com` / `ns2.vercel-dns.com` (automatic if bought through Vercel) and
   change the VSCS webhook URL to `https://alvinkalaivannan.com/api/revalidate`.
-- Resume: `public/resume.pdf` is live (phone number left out on purpose). Its VSCS bullet
-  still says "personal van and truck"; the subject vehicle is now a 2025 RAV4.
+- Resume: `public/resume.pdf` updated 2026-11-18 (ADR bullets, UofT email, site link, phone
+  number left out on purpose). Its header links alvinkalaivannan.vercel.app; switch to .com
+  once the domain is bought.
 - Optional: `GITHUB_TOKEN` in Vercel to raise the GitHub API rate limit.
 - Possibly later: a new signature element to replace the frame, if the page feels too plain.
 
